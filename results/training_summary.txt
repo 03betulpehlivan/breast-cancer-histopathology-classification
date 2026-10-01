@@ -1,0 +1,5 @@
+========== TRAINING SUMMARY ==========
+
+Best Validation Loss : 0.2391
+Best Validation Accuracy : 90.9731
+Best Epoch : 19

@@ -1,0 +1,8 @@
+========== SVM RESULTS ==========
+
+Accuracy : 0.9142
+Balanced Accuracy : 0.9142
+Precision : 0.9076
+Recall : 0.9219
+F1-Score : 0.9147
+ROC-AUC : 0.9526

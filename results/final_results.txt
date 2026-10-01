@@ -1,0 +1,4 @@
+========== FINAL TRAINING RESULTS ==========
+
+Best Validation Accuracy : 90.97%
+Best Validation Loss : 0.2432

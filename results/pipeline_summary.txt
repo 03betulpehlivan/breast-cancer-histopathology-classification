@@ -1,0 +1,5 @@
+========== PIPELINE SUMMARY ==========
+
+Best Model : checkpoints\best_model.pth
+Results Directory : results
+Figures Directory : figures
