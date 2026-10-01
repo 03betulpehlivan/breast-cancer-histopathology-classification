@@ -1,0 +1,13 @@
+# Presentation interface (app.py)
+streamlit>=1.28.0
+pillow>=10.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Core pipeline dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+timm>=0.9.0
+
+# Optional utilities
+pandas>=2.0.0
