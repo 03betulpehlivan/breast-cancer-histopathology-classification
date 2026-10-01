@@ -43,3 +43,5 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+
+evaluation/selected_images/
