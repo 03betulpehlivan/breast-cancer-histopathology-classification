@@ -45,3 +45,9 @@ logs/
 Thumbs.db
 
 evaluation/selected_images/
+
+# Generated Grad-CAM outputs
+figures/gradcam_final/
+figures/gradcam_gallery/
+results/all_labels.npy
+results/all_probabilities.npy
