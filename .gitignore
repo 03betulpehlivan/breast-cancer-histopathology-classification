@@ -1,0 +1,45 @@
+﻿# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+
+# Datasets
+breast-histopathology-images/
+breast-histopathology-images.zip
+project_data/raw_dataset/
+project_data/final_dataset/
+
+# Model checkpoints / trained weights
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.joblib
+
+# Logs
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
