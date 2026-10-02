@@ -761,7 +761,7 @@ To reproduce the recorded experiment, use the same configuration values in `conf
 
 The written project report is included in this repository:
 
-**[View the Full Project Report](./Hybrid%20Deep%20Feature%20Fusion%20for%20Breast%20Cancer%20Histopathology.pdf)**
+**[View the Full Project Report](./Hybrid%20Deep%20Feature%20Fusion%20for%20Breast%20Cancer%20Histopathology%20.pdf)**
 
 ---
 
