@@ -535,29 +535,25 @@ streamlit run app.py
 
 The dashboard is **not** a clinical diagnostic device. Predictions depend on a local `best_model.pth` checkpoint; if the file is missing, live inference reports an error.
 
-### Application screenshot placeholders
+### Application Screenshots
 
-Screenshots of the Streamlit UI are **not** in this repository. No application images are claimed here. After capturing the running app, they can be inserted below.
+#### Cancerous Tissue Prediction
 
-**Home / hero and system status**
+The Streamlit dashboard can classify an uploaded histopathology image as cancerous and display the corresponding confidence score.
 
-> *[Screenshot to be added]*
+![Cancerous Tissue Prediction](figures/streamlit_cancerous_prediction.png)
 
-**Live Diagnosis (upload and prediction)**
+#### Non-Cancerous Tissue Prediction
 
-> *[Screenshot to be added]*
+The dashboard also supports non-cancerous tissue predictions and displays the class probability distribution.
 
-**Training Analytics**
+![Non-Cancerous Tissue Prediction](figures/streamlit_non_cancerous_prediction.png)
 
-> *[Screenshot to be added]*
+#### Training Analytics
 
-**ROC Analysis and Confusion Matrix tabs**
+The Training Analytics tab provides a visual replay of the recorded training trajectory, including training and validation accuracy and loss curves. This is a demonstration of the recorded training process and does not retrain the model.
 
-> *[Screenshot to be added]*
-
-**Model Comparison and Classification Report**
-
-> *[Screenshot to be added]*
+![Training Analytics](figures/streamlit_training_analytics.png)
 
 ---
 
