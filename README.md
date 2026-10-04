@@ -408,8 +408,8 @@ Confusion-matrix counts from `figures/confusion_matrix.png`:
 
 |  | Predicted negative | Predicted positive |
 | --- | ---: | ---: |
-| **True negative** | 2,286 | 205 |
-| **True positive** | 220 | 2,263 |
+| **Actual negative** | 2,286 | 205 |
+| **Actual positive** | 220 | 2,263 |
 
 #### RBF-SVM on fused features (test set)
 
@@ -436,8 +436,8 @@ Confusion-matrix counts from `figures/svm_confusion_matrix.png`:
 
 |  | Predicted negative | Predicted positive |
 | --- | ---: | ---: |
-| **True negative** | 2,258 | 233 |
-| **True positive** | 194 | 2,289 |
+| **Actual negative** | 2,258 | 233 |
+| **Actual positive** | 194 | 2,289 |
 
 On this recorded test set, the fusion MLP has slightly higher accuracy and ROC-AUC; the RBF-SVM has slightly higher recall and F1-score.
 
