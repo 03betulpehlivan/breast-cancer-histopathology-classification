@@ -1,6 +1,6 @@
 # Hybrid Deep Feature Fusion for Breast Cancer Histopathology
 
-A modular deep learning pipeline for **binary classification of breast cancer histopathology images** (IDC-negative vs. IDC-positive). The system extracts complementary representations from three pretrained vision backbones—**Vision Transformer (ViT)**, **Swin Transformer**, and **ConvNeXt**—fuses those features, and classifies them with both a learned MLP head and an **RBF-kernel Support Vector Machine**.
+A modular deep learning pipeline for **binary classification of breast cancer histopathology images** (IDC-negative vs. IDC-positive). The system extracts complementary representations from three pretrained vision backbones—**Vision Transformer (ViT)**, **Swin Transformer**, and **ConvNeXt**—and fuses those features. The fused representation is classified using an end-to-end **MLP head** and is also evaluated with a separate **RBF-kernel Support Vector Machine (SVM)**.
 
 This repository is organized as an end-to-end research codebase: dataset preparation, training, evaluation, interpretability utilities, and a Streamlit demonstration application.
 
@@ -16,7 +16,7 @@ The project implements a **hybrid feature-fusion** approach for invasive ductal 
 
 Fused embeddings are batch-normalized and passed to a multilayer classifier. After the fusion model is trained, the same fused embeddings are used to train a separate **RBF-SVM** classifier. Quantitative results, training curves, ROC plots, and confusion matrices are stored under `results/` and `figures/`.
 
-A Streamlit dashboard (`app.py`) provides inference on uploaded patches and presents the recorded experimental metrics. Grad-CAM modules exist for spatial attribution and are documented as supporting interpretability tools, not as the primary experimental outcome.
+A Streamlit dashboard (`app.py`) provides inference on uploaded histopathology images and presents the recorded experimental metrics. Grad-CAM modules exist for spatial attribution and are documented as supporting interpretability tools, not as the primary experimental outcome.
 
 **Project identifiers** (from `configs/config.py`):
 
@@ -101,7 +101,7 @@ Dataset construction is implemented in `dataset/dataset_builder.py`.
 - `"0"` → `IDC_negative`
 - `"1"` → `IDC_positive`
 
-**Configured split sizes** (`configs/config.py`):
+**Configured target split sizes** (`configs/config.py`):
 
 | Split | Images per class | Classes |
 | --- | ---: | --- |
@@ -597,18 +597,18 @@ Generated Grad-CAM image galleries are excluded from version control (`.gitignor
 Source layout currently in the repository:
 
 ```text
-transfromers_model/
+transformers_model/
 ├── README.md
 ├── .gitignore
 ├── app.py
 ├── main.py
 ├── quick_test.py
 ├── requirements.txt
-├── transfromers_model.pyproj
-├── transfromers_model.sln
+├── transformers_model.pyproj
+├── transformers_model.sln
 │
 ├── configs/
-│   ├── _init_.py
+│   ├── __init__.py
 │   └── config.py
 │
 ├── dataset/
@@ -627,14 +627,14 @@ transfromers_model/
 │   └── train_svm.py
 │
 ├── evaluation/
-│   ├── _init_.py
+│   ├── __init__.py
 │   ├── metrics.py
 │   ├── visualization.py
 │   ├── gradcam.py
 │   └── gradcam_main.py
 │
 ├── utils/
-│   ├── _init_.py
+│   ├── __init__.py
 │   └── seed_utils.py
 │
 ├── figures/                         # evaluation plots embedded above
@@ -658,8 +658,8 @@ transfromers_model/
 Python 3 with CUDA-capable PyTorch is recommended when a GPU is available (`CFG.DEVICE` selects `cuda` if present).
 
 ```bash
-git clone <repository-url>
-cd transfromers_model
+git clone https://github.com/03betulpehlivan/breast-cancer-histopathology-classification.git
+cd breast-cancer-histopathology-classification
 
 python -m venv .venv
 # Windows
